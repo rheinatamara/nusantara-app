@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap");
+
 $main-color: #e2e9fa;
 $primary-color: rgb(15, 15, 15);
 $main-width: 0 10rem;
@@ -19,7 +20,9 @@ body.dark {
 body {
   background-color: $main-color;
   font-family: "Nunito", sans-serif;
-  padding: $main-width;
+  .home-container {
+    padding: $main-width;
+  }
   ul {
     list-style: none;
   }
@@ -29,11 +32,28 @@ body {
   nav {
     display: flex;
     font-size: $small-text-size;
+    h4 {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
     justify-content: space-between;
     padding: $top-bottom-padding;
-
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h4 {
+        padding-left: 5px;
+      }
+    }
     ul {
       display: flex;
+      .login button {
+        border: none;
+        background-color: $main-color;
+        cursor: pointer;
+        font-size: $small-text-size;
+      }
       .login:after {
         display: block;
         content: "";
@@ -170,10 +190,13 @@ body {
       }
       &-card {
         display: flex;
+        flex-direction: row;
         .card {
+          img {
+            width: 25rem;
+          }
           line-height: 2;
           position: relative;
-
           .food-title {
             font-weight: 900;
           }
@@ -293,13 +316,31 @@ body {
           color: $gray-color;
         }
         #map {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          left: 0;
+          margin-top: 2rem;
+        }
+      }
+      &-flex {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        h1 {
+          font-weight: bolder;
+        }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          .container {
+            ul {
+              display: flex;
+              flex-direction: column;
+            }
+            .title {
+              padding-bottom: 1.5rem;
+            }
+          }
         }
       }
     }
   }
 }
+@import "./media";

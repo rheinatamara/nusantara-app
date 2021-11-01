@@ -1,0 +1,144 @@
+// tablets and smaller
+
+$smaller-width: 0 5rem;
+$smartphone-width: 0 0.1rem;
+@media (max-width: 800px) {
+  body {
+    .home-container {
+      padding: $smaller-width;
+    }
+    #landing-page {
+      .header-container {
+        h1 {
+          font-size: 2.5rem;
+        }
+        height: 40vh;
+        .text {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    #foods {
+      .foods-container {
+        height: 55vh;
+        flex-direction: column;
+        .foods-card {
+          margin-left: 1rem;
+        }
+        .text-food-card {
+          margin-top: 4rem;
+          text-align: center;
+        }
+      }
+    }
+    #new-recipe {
+      .new-recipe-container {
+        height: 35vh;
+        .new-recipe-text {
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .specialize-container {
+      height: 35vh;
+      .specialize-text {
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+// smartphones
+@media (max-width: 500px) {
+  body {
+    #landing-page {
+      .header-container {
+        .image-container {
+          img {
+            display: none;
+          }
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+        height: 40vh;
+        .text {
+          margin-bottom: 0.7rem;
+        }
+      }
+    }
+    #foods {
+      .foods-container {
+        margin-top: 11rem;
+        .foods-card {
+          margin-left: 2rem;
+          flex-direction: column;
+
+          .card {
+            margin-bottom: 1rem;
+            padding: 1.5rem 0.2rem;
+            img {
+              width: 20rem;
+            }
+          }
+        }
+      }
+    }
+    #new-recipe {
+      .new-recipe-container {
+        height: 3vh;
+
+        margin-left: 2rem;
+        margin-top: 30rem;
+        flex-direction: column-reverse;
+        text-align: center;
+        .new-recipe-text {
+          margin-top: 1.5rem;
+          h1 {
+            font-size: 1.5rem;
+          }
+          p {
+            font-size: 0.7rem;
+          }
+        }
+        .new-recipe-image {
+          margin-left: -2rem;
+        }
+      }
+    }
+    .specialize-container {
+      text-align: center;
+      margin-right: 3rem;
+      margin-top: 15rem;
+      flex-direction: column-reverse;
+      .specialize-text {
+        h1 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.7rem;
+        }
+      }
+      .specialize-image {
+        img {
+          margin-left: 1.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .contact-us-container {
+      flex-direction: column;
+      text-align: center;
+      .contact-us-text {
+        margin-bottom: 1rem;
+      }
+    }
+    .footer-container {
+      font-size: 0.6rem;
+    }
+  }
+}
